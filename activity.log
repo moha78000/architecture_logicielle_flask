@@ -4393,3 +4393,398 @@ WHERE entries.id = ?
 2025-04-20 19:41:12,692 [INFO] 127.0.0.1 - - [20/Apr/2025 19:41:12] "GET / HTTP/1.1" 200 -
 2025-04-20 19:41:18,315 [INFO] Accès à la page d'accueil.
 2025-04-20 19:41:18,316 [INFO] 127.0.0.1 - - [20/Apr/2025 19:41:18] "GET / HTTP/1.1" 200 -
+2025-04-20 19:47:12,735 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:12] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-20 19:47:25,651 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:47:25,654 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:25] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:47:25,657 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:25] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-20 19:47:31,085 [INFO] Accès à la page d'accueil.
+2025-04-20 19:47:31,099 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:31] "GET / HTTP/1.1" 200 -
+2025-04-20 19:47:31,139 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:47:31,141 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-20 19:47:35,336 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:47:35,337 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:35] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:47:36,046 [INFO] Accès à la page d'accueil.
+2025-04-20 19:47:36,048 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:36] "GET / HTTP/1.1" 200 -
+2025-04-20 19:47:45,910 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:47:45,911 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:45] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:47:46,333 [INFO] Accès à la page d'accueil.
+2025-04-20 19:47:46,334 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:46] "GET / HTTP/1.1" 200 -
+2025-04-20 19:47:53,417 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:47:53,418 [INFO] 127.0.0.1 - - [20/Apr/2025 19:47:53] "[33mGET /efrfvg HTTP/1.1[0m" 404 -
+2025-04-20 19:48:03,393 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:48:03,395 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:03] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:48:03,772 [INFO] Accès à la page d'accueil.
+2025-04-20 19:48:03,773 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:03] "GET / HTTP/1.1" 200 -
+2025-04-20 19:48:40,474 [INFO] Accès à la page d'accueil.
+2025-04-20 19:48:40,475 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:40] "GET / HTTP/1.1" 200 -
+2025-04-20 19:48:45,122 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:48:45,124 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:45] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:48:45,593 [INFO] Accès à la page d'accueil.
+2025-04-20 19:48:45,594 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:45] "GET / HTTP/1.1" 200 -
+2025-04-20 19:48:52,014 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:48:52,015 [INFO] 127.0.0.1 - - [20/Apr/2025 19:48:52] "[33mGET /6586587 HTTP/1.1[0m" 404 -
+2025-04-20 19:49:05,862 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:49:05,863 [INFO] 127.0.0.1 - - [20/Apr/2025 19:49:05] "[33mGET /ergsrtgrtgrtg HTTP/1.1[0m" 404 -
+2025-04-20 19:49:09,390 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:49:09,390 [INFO] 127.0.0.1 - - [20/Apr/2025 19:49:09] "[33mGET /dsz HTTP/1.1[0m" 404 -
+2025-04-20 19:50:24,925 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-20 19:50:24,992 [INFO]  * Restarting with stat
+2025-04-20 19:50:26,539 [WARNING]  * Debugger is active!
+2025-04-20 19:50:26,542 [INFO]  * Debugger PIN: 201-715-300
+2025-04-20 19:50:29,253 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:50:29,266 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:29] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-04-20 19:50:29,974 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:50:29,979 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:29] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-04-20 19:50:30,322 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:30] "GET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-20 19:50:30,341 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:30] "GET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-20 19:50:30,672 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:30] "GET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=1MpJHMFmtk5Sb44NS6vG HTTP/1.1" 200 -
+2025-04-20 19:50:30,939 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:30] "GET /users/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-20 19:50:38,540 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:50:38,544 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:38] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-04-20 19:50:38,848 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:38] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-20 19:50:38,862 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:38] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-20 19:50:39,172 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:39] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=1MpJHMFmtk5Sb44NS6vG HTTP/1.1[0m" 304 -
+2025-04-20 19:50:39,490 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:50:39,494 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:39] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-04-20 19:50:39,795 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:39] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-20 19:50:39,811 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:39] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-20 19:50:40,126 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:40] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=1MpJHMFmtk5Sb44NS6vG HTTP/1.1[0m" 304 -
+2025-04-20 19:50:44,045 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-20 19:50:44,117 [INFO]  * Restarting with stat
+2025-04-20 19:50:45,461 [WARNING]  * Debugger is active!
+2025-04-20 19:50:45,464 [INFO]  * Debugger PIN: 201-715-300
+2025-04-20 19:50:45,490 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 19:50:45,493 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:45] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 19:50:45,957 [INFO] Accès à la page d'accueil.
+2025-04-20 19:50:45,963 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:45] "GET / HTTP/1.1" 200 -
+2025-04-20 19:50:49,862 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 19:50:49,865 [INFO] 127.0.0.1 - - [20/Apr/2025 19:50:49] "[33mGET /5455825 HTTP/1.1[0m" 404 -
+2025-04-20 20:13:31,510 [INFO] Accès à la page d'accueil.
+2025-04-20 20:13:31,511 [INFO] 127.0.0.1 - - [20/Apr/2025 20:13:31] "GET / HTTP/1.1" 200 -
+2025-04-20 20:13:33,607 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:13:33,609 [INFO] 127.0.0.1 - - [20/Apr/2025 20:13:33] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:13:33,993 [INFO] Accès à la page d'accueil.
+2025-04-20 20:13:33,994 [INFO] 127.0.0.1 - - [20/Apr/2025 20:13:33] "GET / HTTP/1.1" 200 -
+2025-04-20 20:13:53,253 [INFO] Accès au formulaire d'importation CSV.
+2025-04-20 20:13:53,255 [INFO] 127.0.0.1 - - [20/Apr/2025 20:13:53] "GET /import_csv HTTP/1.1" 200 -
+2025-04-20 20:16:45,513 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-20 20:16:45,580 [INFO]  * Restarting with stat
+2025-04-20 20:16:47,029 [WARNING]  * Debugger is active!
+2025-04-20 20:16:47,033 [INFO]  * Debugger PIN: 201-715-300
+2025-04-20 20:16:50,814 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 233, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:16:50,817 [INFO] 127.0.0.1 - - [20/Apr/2025 20:16:50] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:16:51,289 [INFO] Accès à la page d'accueil.
+2025-04-20 20:16:51,294 [INFO] 127.0.0.1 - - [20/Apr/2025 20:16:51] "GET / HTTP/1.1" 200 -
+2025-04-20 20:16:58,228 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 233, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:16:58,231 [INFO] 127.0.0.1 - - [20/Apr/2025 20:16:58] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:16:58,904 [INFO] Accès à la page d'accueil.
+2025-04-20 20:16:58,905 [INFO] 127.0.0.1 - - [20/Apr/2025 20:16:58] "GET / HTTP/1.1" 200 -
+2025-04-20 20:17:31,181 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-20 20:17:31,244 [INFO]  * Restarting with stat
+2025-04-20 20:17:32,652 [WARNING]  * Debugger is active!
+2025-04-20 20:17:32,655 [INFO]  * Debugger PIN: 201-715-300
+2025-04-20 20:17:37,512 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:17:37,515 [INFO] 127.0.0.1 - - [20/Apr/2025 20:17:37] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:17:38,139 [INFO] Accès à la page d'accueil.
+2025-04-20 20:17:38,144 [INFO] 127.0.0.1 - - [20/Apr/2025 20:17:38] "GET / HTTP/1.1" 200 -
+2025-04-20 20:17:41,771 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:17:41,774 [INFO] 127.0.0.1 - - [20/Apr/2025 20:17:41] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:17:42,463 [INFO] Accès à la page d'accueil.
+2025-04-20 20:17:42,464 [INFO] 127.0.0.1 - - [20/Apr/2025 20:17:42] "GET / HTTP/1.1" 200 -
+2025-04-20 20:18:53,591 [INFO] Accès à la page d'accueil.
+2025-04-20 20:18:53,592 [INFO] 127.0.0.1 - - [20/Apr/2025 20:18:53] "GET / HTTP/1.1" 200 -
+2025-04-20 20:18:57,233 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:18:57,235 [INFO] 127.0.0.1 - - [20/Apr/2025 20:18:57] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:18:57,682 [INFO] Accès à la page d'accueil.
+2025-04-20 20:18:57,683 [INFO] 127.0.0.1 - - [20/Apr/2025 20:18:57] "GET / HTTP/1.1" 200 -
+2025-04-20 20:19:32,633 [INFO] Accès à la page d'accueil.
+2025-04-20 20:19:32,634 [INFO] 127.0.0.1 - - [20/Apr/2025 20:19:32] "GET / HTTP/1.1" 200 -
+2025-04-20 20:19:55,844 [INFO] Accès à la page d'accueil.
+2025-04-20 20:19:55,857 [INFO] 127.0.0.1 - - [20/Apr/2025 20:19:55] "GET / HTTP/1.1" 200 -
+2025-04-20 20:19:58,202 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:19:58,204 [INFO] 127.0.0.1 - - [20/Apr/2025 20:19:58] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:19:58,884 [INFO] Accès à la page d'accueil.
+2025-04-20 20:19:58,885 [INFO] 127.0.0.1 - - [20/Apr/2025 20:19:58] "GET / HTTP/1.1" 200 -
+2025-04-20 20:20:03,264 [INFO] Accès à la page d'accueil.
+2025-04-20 20:20:03,265 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:03] "GET / HTTP/1.1" 200 -
+2025-04-20 20:20:08,807 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:08] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-20 20:20:12,581 [INFO] Accès à la page d'accueil.
+2025-04-20 20:20:12,582 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:12] "GET / HTTP/1.1" 200 -
+2025-04-20 20:20:18,442 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 242, in users_create_form
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
+    ^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-04-20 20:20:18,443 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:18] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-04-20 20:20:19,117 [INFO] Accès à la page d'accueil.
+2025-04-20 20:20:19,118 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:19] "GET / HTTP/1.1" 200 -
+2025-04-20 20:20:22,268 [ERROR] Erreur 404: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. - Page introuvable.
+2025-04-20 20:20:22,271 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:22] "[33mGET /5655.63 HTTP/1.1[0m" 404 -
+2025-04-20 20:21:12,343 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-20 20:21:12,396 [INFO]  * Restarting with stat
