@@ -3189,3 +3189,7 @@ FROM entries
 2025-04-14 18:49:25,376 [INFO] [generated in 0.00017s] ('poutou', 1.0, 'padel', '51d97b80fbfb4e84aa50cd9d1bbf092d')
 2025-04-14 18:49:25,377 [INFO] COMMIT
 2025-04-14 18:49:25,379 [INFO] 127.0.0.1 - - [14/Apr/2025 18:49:25] "PUT /api/user/51d97b80fbfb4e84aa50cd9d1bbf092d HTTP/1.1" 200 -
+2025-04-14 18:50:32,873 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-14 18:50:32,945 [INFO]  * Restarting with stat
+2025-04-14 18:50:34,300 [WARNING]  * Debugger is active!
+2025-04-14 18:50:34,302 [INFO]  * Debugger PIN: 201-715-300
