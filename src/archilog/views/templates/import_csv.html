@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Importer un fichier CSV</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/import_csv.css') }}">
-</head>
-<body>
+{% extends "index.html" %}
+
+{% block title %}Importer un fichier CSV{% endblock %}
+
+{% block content %}
     <h1>Importer un fichier CSV</h1>
+
     <form action="{{ url_for('web_ui.import_csv') }}" method="POST" enctype="multipart/form-data">
         <input type="file" name="csv_file" accept=".csv" required>
         <button type="submit">Importer</button>
     </form>
-</body>
-</html>
+{% endblock %}

@@ -1,41 +1,36 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toutes les entrées</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/entries.css') }}">
-</head>
-<body>
-    <h1>Toutes les entrées dans la base de données</h1>
+{% extends "index.html" %}
 
-    <!-- Table pour afficher les entrées -->
-    <table>
-        <thead>
+{% block title %}Toutes les entrées{% endblock %}
+
+{% block content %}
+<h1>Toutes les entrées dans la base de données</h1>
+
+<!-- Table pour afficher les entrées -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Montant</th>
+            <th>Catégorie</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
             <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Montant</th>
-                <th>Catégorie</th>
+                <td>{{ entry.id }}</td>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.amount }}</td>
+                <td>{{ entry.category }}</td>
             </tr>
-        </thead>
-        <tbody>
-            {% for entry in entries %}
-                <tr>
-                    <td>{{ entry.id }}</td>
-                    <td>{{ entry.name }}</td>
-                    <td>{{ entry.amount }}</td>
-                    <td>{{ entry.category }}</td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="4">Aucune entrée disponible.</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune entrée disponible.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
-    <!-- Lien pour télécharger en CSV -->
-    <a href="{{ url_for('web_ui.export_csv') }}">Télécharger en CSV</a>
-</body>
-</html>
+<!-- Lien pour télécharger en CSV -->
+<a href="{{ url_for('web_ui.export_csv') }}" class="btn-primary">Télécharger en CSV</a>
+{% endblock %}

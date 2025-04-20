@@ -1,46 +1,53 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrées</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/update.css') }}">
-</head>
-<body>
+{% extends "index.html" %}
 
+{% block title %}Mise à jour des Entrées{% endblock %}
+
+{% block content %}
     <h1>Mise à jour des Entrées</h1>
-<!-- Dans votre tableau HTML -->
-{% for entry in entries %}
-<tr>
-    <form method="POST" action="{{ url_for('web_ui.update_entry_form') }}">
-        {{ form.hidden_tag() }}
-        <input type="hidden" name="id" value="{{ entry.id }}">
-        
-        <td>{{ entry.id }}</td>
-        
-        <td>
-            {{ form.name(value=entry.name) }}
-            {% for error in form.name.errors %}
-                <span class="error">{{ error }}</span>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Montant</th>
+                <th>Catégorie</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <form method="POST" action="{{ url_for('web_ui.update_entry_form') }}">
+                    {{ form.hidden_tag() }}
+                    <input type="hidden" name="id" value="{{ entry.id }}">
+                    
+                    <td>{{ entry.id }}</td>
+                    
+                    <td>
+                        {{ form.name(value=entry.name) }}
+                        {% for error in form.name.errors %}
+                            <span class="error">{{ error }}</span>
+                        {% endfor %}
+                    </td>
+                    
+                    <td>
+                        {{ form.amount(value=entry.amount) }}
+                        {% for error in form.amount.errors %}
+                            <span class="error">{{ error }}</span>
+                        {% endfor %}
+                    </td>
+                    
+                    <td>
+                        {{ form.category(value=entry.category) }}
+                    </td>
+                    
+                    <td>
+                        {{ form.submit() }}
+                    </td>
+                </form>
+            </tr>
             {% endfor %}
-        </td>
-        
-        <td>
-            {{ form.amount(value=entry.amount) }}
-            {% for error in form.amount.errors %}
-                <span class="error">{{ error }}</span>
-            {% endfor %}
-        </td>
-        
-        <td>
-            {{ form.category(value=entry.category) }}
-        </td>
-        
-        <td>
-            {{ form.submit() }}
-        </td>
-    </form>
-</tr>
-{% endfor %}
-</body>
-</html>
+        </tbody>
+    </table>
+{% endblock %}

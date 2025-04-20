@@ -1,57 +1,133 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrées</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/delete.css') }}">
-</head>
-<body>
-    <h1>Liste des Entrées</h1>
+{% extends "index.html" %}
 
-    <!-- Affichage des messages flash -->
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul>
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
+{% block title %}Liste des Entrées{% endblock %}
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                <th>Montant</th>
-                <th>Catégorie</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for entry in entries %}
-            <tr>
-                <td>{{ entry.id }}</td>
-                <td>{{ entry.name }}</td>
-                <td>{{ entry.amount }}</td>
-                <td>{{ entry.category }}</td>
-                <td>
-                    <!-- Formulaire de suppression avec WTForms -->
-                    <form method="POST">
-                        {{ form.hidden_tag() }}  <!-- Protection CSRF -->
-                        <input type="hidden" name="user_id" value="{{ entry.id }}">
-                        <button type="submit">Supprimer</button>
-                    </form>
-                </td>
-            </tr>           
-            {% else %}
-            <tr>
-                <td colspan="5">Aucune entrée trouvée</td>
-            </tr>
+{% block content %}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td[colspan="5"] {
+    text-align: center;
+    color: #888;
+}
+
+form {
+    display: inline-block;
+    margin: 0;
+}
+
+button {
+    padding: 6px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+button:active {
+    background-color: #a93226;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    button {
+        padding: 8px 20px;
+    }
+}
+<h1>Liste des Entrées</h1>
+
+<!-- Affichage des messages flash -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
             {% endfor %}
-        </tbody>
-    </table>
-</body>
-</html>
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Montant</th>
+            <th>Catégorie</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.amount }}</td>
+            <td>{{ entry.category }}</td>
+            <td>
+                <!-- Formulaire de suppression avec WTForms -->
+                <form method="POST">
+                    {{ form.hidden_tag() }}  <!-- Protection CSRF -->
+                    <input type="hidden" name="user_id" value="{{ entry.id }}">
+                    <button type="submit" class="btn-danger">Supprimer</button>
+                </form>
+            </td>
+        </tr>           
+        {% else %}
+        <tr>
+            <td colspan="5">Aucune entrée trouvée</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

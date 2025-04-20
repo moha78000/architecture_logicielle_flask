@@ -1,25 +1,20 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails de l'Entrée</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/entry.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Détails de l'entrée</h1>
-        
-        {% if entry %}
-            <p><strong>ID:</strong> {{ entry.id }}</p>
-            <p><strong>Nom:</strong> {{ entry.name }}</p>
-            <p><strong>Montant:</strong> {{ entry.amount }}</p>
-            <p><strong>Catégorie:</strong> {{ entry.category }}</p>
-        {% else %}
-            <p>Aucune entrée trouvée pour cet ID.</p>
-        {% endif %}
-        
-        <a href="{{ url_for('web_ui.home') }}">Retour à l'accueil</a>
-    </div>
-</body>
-</html>
+{% extends "index.html" %}
+
+{% block title %}Détails de l'entrée{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Détails de l'entrée</h1>
+
+    {% if entry %}
+        <p><strong>ID:</strong> {{ entry.id }}</p>
+        <p><strong>Nom:</strong> {{ entry.name }}</p>
+        <p><strong>Montant:</strong> {{ entry.amount }}</p>
+        <p><strong>Catégorie:</strong> {{ entry.category }}</p>
+    {% else %}
+        <p>Aucune entrée trouvée pour cet ID.</p>
+    {% endif %}
+
+    <a href="{{ url_for('web_ui.home') }}">Retour à l'accueil</a>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Erreur 404 - Page non trouvée</title>
+  <style>
+    .error-container {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-left: 5px solid #f5c6cb;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flashes">
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="error-container">
+    <h1>404</h1>
+    <h2>Page non trouvée</h2>
+    <p>Oups ! La page que vous recherchez n'existe pas ou a été déplacée.</p>
+    <a href="{{ url_for('web_ui.home') }}">Retour à l'accueil</a>
+  </div>
+
+</body>
+</html>

@@ -1,37 +1,29 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue sur mon application Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-</head>
+<!-- templates/home.html -->
+{% extends "index.html" %}
 
-<body>
-    <div class="container">
-        <h1>Accueil</h1>
+{% block title %}Page d'accueil{% endblock %}
+
+{% block header %}
+    <h1>Accueil</h1>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="links">
         <a href="{{ url_for('web_ui.create_entry_form') }}">Créer une nouvelle entrée</a>
         <a href="{{ url_for('web_ui.list_entries') }}">Voir toutes les entrées</a>
-         <!-- Formulaire pour rechercher une entrée par son ID -->
+        <a href="{{ url_for('web_ui.delete_entry_form') }}">Supprimer une entrée</a>
+        <a href="{{ url_for('web_ui.update_entry_form') }}">Mettre à jour une entrée</a>
+        <a href="{{ url_for('web_ui.import_csv') }}">Importer un fichier CSV</a>
+    </div>
+
+    <!-- Formulaire pour rechercher une entrée par son ID -->
+    <div class="search-form">
         <form action="{{ url_for('web_ui.get_entry') }}" method="get">
-            <label for="id">Rechercher une entrée par ID:</label>
+            <label for="id">Rechercher une entrée par ID :</label>
             <input type="text" id="id" name="id" required>
             <button type="submit">Rechercher</button>
         </form>
-        <a href="{{ url_for('web_ui.delete_entry_form') }}">Pour supprimer une entrée</a>
-        <a href="{{ url_for('web_ui.update_entry_form') }}">Pour mettre à jour une entrée</a>
-        <a href="{{ url_for('web_ui.import_csv') }}">Importer un fichier CSV</a>
-        
     </div>
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul class="flashes">
-                {% for category , message in messages %}
-                    <li class="flash {{ category }}"> {{ message }} </li>
-                {% endfor %}    
-            </ul>
-        {% endif %}
-    {% endwith %}            
-
-</body>
-</html>
+{% endblock %}

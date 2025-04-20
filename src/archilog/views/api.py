@@ -27,8 +27,8 @@ security=[{"bearer_token": []}]
 
 
 tokens = {
-"secret-token-1": {"username" : "admin" , "role": "admin"},
-"secret-token-2": {"username" : "user" , "role": "user"},
+"admin-token": {"username" : "admin" , "role": "admin"},
+"user-token": {"username" : "user" , "role": "user"}
 }
 
 
@@ -126,7 +126,7 @@ def get_entry(id: UUID):
     return jsonify(entry_data), 200
 
 @api.route("/export/entries", methods=["GET"])
-@spec.validate(tags=["api"])
+@spec.validate(tags=["import-export"])
 @auth.login_required
 def export_csv_api():
     csv_data = export_to_csv()
@@ -136,7 +136,7 @@ class File(BaseModel):
     file : BaseFile
 
 @api.route("/import/entries", methods=["POST"])
-@spec.validate(tags=["api"])
+@spec.validate(tags=["import-export"])
 @auth.login_required(role="admin")
 def import_csv(form : File): 
     filestream = io.StringIO(form.file.stream.read().decode("utf-8"))

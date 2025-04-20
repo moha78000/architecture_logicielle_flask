@@ -1,6 +1,6 @@
 from flask import Flask
 from archilog import config
-from archilog.views.web_ui import web_ui
+from archilog.views.web_ui import web_ui , register_error_handlers
 from dotenv import load_dotenv
 from archilog.views.api import api , spec
 
@@ -20,6 +20,7 @@ def create_app():
 
     app.register_blueprint(web_ui)
     app.register_blueprint(api)
+    register_error_handlers(app) 
     
     
 

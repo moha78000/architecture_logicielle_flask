@@ -1,5 +1,5 @@
 import uuid
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response 
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response  , abort
 import archilog.models as models
 import archilog.services as services
 from flask_wtf import FlaskForm 
@@ -228,23 +228,16 @@ def handle_internal_error(error):
     return redirect(url_for("web_ui.home"))
 
 
-@web_ui.errorhandler(404)
-def handle_404_error(error):
-    flash("Page non trouvée", "error")
-    logging.error("Erreur 404: Page introuvable.")
-    return render_template("404.html"), 404
+# Gestionnaire d'erreurs 404 (page introuvable)
+def register_error_handlers(app):
+    @app.errorhandler(404)
+    def page_not_found(error):
+        flash("Page non trouvée", "error")
+        logging.error(f"Erreur 404: {error} - Page introuvable.")  # Logue l'erreur 404
+        return render_template('404.html'), 404
 
-
+# Route de test pour simuler une erreur 500
 @web_ui.get("/users/create")
 def users_create_form():
-    abort(500)
+    abort(500)  # Force une erreur 500 pour tester le gestionnaire
     return render_template("users_create_form.html")
-
-
-
-
-
-
-
-
-
