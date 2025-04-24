@@ -4788,3 +4788,60 @@ werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server e
 2025-04-20 20:20:22,271 [INFO] 127.0.0.1 - - [20/Apr/2025 20:20:22] "[33mGET /5655.63 HTTP/1.1[0m" 404 -
 2025-04-20 20:21:12,343 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
 2025-04-20 20:21:12,396 [INFO]  * Restarting with stat
+2025-04-20 20:21:13,728 [WARNING]  * Debugger is active!
+2025-04-20 20:21:13,731 [INFO]  * Debugger PIN: 201-715-300
+2025-04-20 20:23:38,949 [INFO] BEGIN (implicit)
+2025-04-20 20:23:38,950 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-20 20:23:38,951 [INFO] [generated in 0.00035s] ('8693a0de8c2447f786079445f20611ae', 'paul', 15.0, 'jbel')
+2025-04-20 20:23:38,953 [INFO] COMMIT
+2025-04-20 20:24:39,696 [INFO] BEGIN (implicit)
+2025-04-20 20:24:39,698 [INFO] UPDATE entries SET name=?, amount=?, category=? WHERE entries.id = ?
+2025-04-20 20:24:39,698 [INFO] [generated in 0.00032s] ('jules', 213.0, None, '8693a0de8c2447f786079445f20611ae')
+2025-04-20 20:24:39,699 [INFO] COMMIT
+2025-04-20 20:28:41,418 [INFO] BEGIN (implicit)
+2025-04-20 20:28:41,418 [INFO] PRAGMA main.table_info("entries")
+2025-04-20 20:28:41,418 [INFO] [raw sql] ()
+2025-04-20 20:28:41,419 [INFO] PRAGMA temp.table_info("entries")
+2025-04-20 20:28:41,419 [INFO] [raw sql] ()
+2025-04-20 20:28:41,420 [INFO] 
+CREATE TABLE entries (
+	id CHAR(32) NOT NULL, 
+	name VARCHAR NOT NULL, 
+	amount FLOAT NOT NULL, 
+	category VARCHAR, 
+	PRIMARY KEY (id)
+)
+
+
+2025-04-20 20:28:41,420 [INFO] [no key 0.00031s] ()
+2025-04-20 20:28:41,423 [INFO] COMMIT
+2025-04-20 20:28:58,631 [INFO] Accès à la page d'accueil.
+2025-04-20 20:28:58,638 [INFO] 127.0.0.1 - - [20/Apr/2025 20:28:58] "GET / HTTP/1.1" 200 -
+2025-04-20 20:29:00,114 [INFO] Consultation des entrées par admin
+2025-04-20 20:29:00,116 [INFO] BEGIN (implicit)
+2025-04-20 20:29:00,116 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-20 20:29:00,116 [INFO] [generated in 0.00050s] ()
+2025-04-20 20:29:00,118 [INFO] ROLLBACK
+2025-04-20 20:29:00,118 [INFO] 0 entrées récupérées.
+2025-04-20 20:29:00,120 [INFO] 127.0.0.1 - - [20/Apr/2025 20:29:00] "GET /entries HTTP/1.1" 200 -
+2025-04-20 20:29:19,727 [INFO] Accès au formulaire de création d'entrée. admin
+2025-04-20 20:29:19,733 [INFO] 127.0.0.1 - - [20/Apr/2025 20:29:19] "GET /create HTTP/1.1" 200 -
+2025-04-20 20:29:27,367 [INFO] Accès au formulaire de création d'entrée. admin
+2025-04-20 20:29:27,372 [INFO] Création d'une nouvelle entrée: paul, 14.0, Foot
+2025-04-20 20:29:27,372 [INFO] BEGIN (implicit)
+2025-04-20 20:29:27,373 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-20 20:29:27,373 [INFO] [generated in 0.00029s] ('2661eb34ac1e43fa954a1d9b6c54dce4', 'paul', 14.0, 'Foot')
+2025-04-20 20:29:27,374 [INFO] COMMIT
+2025-04-20 20:29:27,376 [INFO] Entrée créée avec succès: paul
+2025-04-20 20:29:27,376 [INFO] 127.0.0.1 - - [20/Apr/2025 20:29:27] "[32mPOST /create HTTP/1.1[0m" 302 -
+2025-04-20 20:29:27,736 [INFO] Accès à la page d'accueil.
+2025-04-20 20:29:27,738 [INFO] 127.0.0.1 - - [20/Apr/2025 20:29:27] "GET / HTTP/1.1" 200 -
+2025-04-20 20:29:29,017 [INFO] Consultation des entrées par admin
+2025-04-20 20:29:29,018 [INFO] BEGIN (implicit)
+2025-04-20 20:29:29,018 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-20 20:29:29,018 [INFO] [cached since 28.9s ago] ()
+2025-04-20 20:29:29,019 [INFO] ROLLBACK
+2025-04-20 20:29:29,019 [INFO] 1 entrées récupérées.
+2025-04-20 20:29:29,020 [INFO] 127.0.0.1 - - [20/Apr/2025 20:29:29] "GET /entries HTTP/1.1" 200 -

@@ -1,7 +1,6 @@
 import csv
 import dataclasses
 import io
-
 from archilog.models import create_entry, get_all_entries, Entry
 
 
