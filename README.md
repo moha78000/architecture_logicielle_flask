@@ -27,7 +27,7 @@
 ### Prérequis
 - Python 3.10+
 - `pdm`
-- fichier `.env` ou `dev.env` contenant `ARCHILOG_DATABASE_URL`.
+- fichier `dev.env` contenant `ARCHILOG_DATABASE_URL`.
 
 Exemple :
 ```env
@@ -57,8 +57,8 @@ pdm run archilog get --id <UUID>
 pdm run archilog get-all
 pdm run archilog update --id <UUID> --name "Nouveau" --amount 120 --category "Autre"
 pdm run archilog delete --id <UUID>
-pdm run archilog import_csv data.csv
-pdm run archilog export_csv sortie.csv
+pdm run archilog import-csv "data.csv"
+pdm run archilog export-csv "export.csv"
 ```
 
 ## Authentification
@@ -71,8 +71,14 @@ Ces utilisateurs sont définis dans `src/archilog/views/web_ui.py`.
 
 ### API
 Le back-end API utilise des tokens statiques dans `src/archilog/views/api.py` :
-- `admin-token` → rôle `admin`
-- `user-token` → rôle `user`
+- `admin-token`, rôle `admin`
+- `user-token`, rôle `user`
+
+Commande à faire pour utiliser API (Swagger via Curl) : 
+`curl -H "Authorization: Bearer user-token" http://127.0.0.1:5000/api/user`
+`curl -X DELETE -H "Authorization: Bearer admin-token" http://127.0.0.1:5000/api/user/"id"`
+`curl -X POST http://127.0.0.1:5000/api/user -H "Authorization: Bearer admin-token" -H "Content-Type: application/json" -d "{\"name\":\"test\",\"amount\":10,\"category\":\"demo\"}"`
+
 
 ## Endpoints importants
 ### Routes web
@@ -94,16 +100,9 @@ Le back-end API utilise des tokens statiques dans `src/archilog/views/api.py` :
 - `GET /api/export/entries` : export CSV
 - `POST /api/import/entries` : import CSV (`admin` uniquement)
 
-## Points à préparer pour l’entretien
-- séparation web / API / CLI,
-- usage de SQLAlchemy Core et SQLite,
-- validation API avec `pydantic` et `spectree`,
-- gestion de l’authentification basique et token,
-- représentation des entrées via `dataclasses.Entry`.
 
 ## Améliorations possibles
 - ajout d’une table `User` et d’une authentification plus robuste,
 - implémentation d’un vrai système d’inscription,
 - migration vers JWT ou Flask-Login,
 - meilleure gestion des erreurs CSV,
-- pagination et recherche sur les entrées.
