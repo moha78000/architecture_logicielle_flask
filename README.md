@@ -31,7 +31,7 @@
 
 Exemple :
 ```env
-ARCHILOG_DATABASE_URL=sqlite:///archilog.db
+ARCHILOG_DATABASE_URL=sqlite:///data.db
 ```
 
 ### Installer les dépendances
@@ -78,6 +78,11 @@ Commande à faire pour utiliser API (Swagger via Curl) :
 `curl -H "Authorization: Bearer user-token" http://127.0.0.1:5000/api/user`
 `curl -X DELETE -H "Authorization: Bearer admin-token" http://127.0.0.1:5000/api/user/"id"`
 `curl -X POST http://127.0.0.1:5000/api/user -H "Authorization: Bearer admin-token" -H "Content-Type: application/json" -d "{\"name\":\"test\",\"amount\":10,\"category\":\"demo\"}"`
+
+curl -X PUT http://127.0.0.1:5000/api/user/ae41f5abb3374fcd8597a04353fcacf9 \
+-H "Authorization: Bearer admin-token" \
+-H "Content-Type: application/json" \
+-d '{"name":"test modifié","amount":20,"category":"demo update"}'
 
 
 ## Endpoints importants
